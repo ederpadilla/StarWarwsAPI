@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Star Wars Sample</string>
+    <string name="id">Id del personaje</string>
+    <string name="invalid_id">El valor proporcionado para el id es invalido</string>
+</resources>

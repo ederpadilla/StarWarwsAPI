@@ -1,0 +1,63 @@
+ext {
+
+  //Android Support Versions
+  supportVersion = '27.1.1'
+
+  //Constraint Layout
+  constraintLayoutVersion = '2.0.0-alpha2'
+  //Retrofit
+  retrofitVersion = '2.4.0'
+
+  // Rx
+  rxAndroidVersion = '2.0.2'
+  rxJavaVersion  = '2.1.9'
+  reactiveNetworkVersion = '1.0.0'
+
+  //Lottie
+  lottieVersion = '2.6.0'
+
+  //OkHttp
+  okktpLogginInterceptorVersion = '3.9.1'
+
+  //Packages
+  supportPackage = 'com.android.support'
+  retrofitPackage = 'com.squareup.retrofit2'
+  constraintPackage = 'com.android.support.constraint'
+
+  reactivePackage = 'io.reactivex.rxjava2'
+
+  okkHttpPackage = 'com.squareup.okhttp3'
+
+  lottiePackage = 'com.airbnb.android'
+
+  supportDependencies = [
+
+      design           : buildDependency(supportPackage, 'design', supportVersion),
+      recyclerView     : buildDependency(supportPackage, 'recyclerview-v7', supportVersion),
+      cardView         : buildDependency(supportPackage, 'cardview-v7', supportVersion),
+      appCompat        : buildDependency(supportPackage, 'appcompat-v7', supportVersion),
+      constraint       : buildDependency(constraintPackage, 'constraint-layout',constraintLayoutVersion),
+      lottie           : buildDependency(lottiePackage,'lottie',lottieVersion)
+  ]
+
+  retrofitDependencies = [
+
+      retrofit     : buildDependency(retrofitPackage, 'retrofit', retrofitVersion),
+      gson         : buildDependency(retrofitPackage, 'converter-gson', retrofitVersion),
+      rxAdapterJava: buildDependency(retrofitPackage, 'adapter-rxjava2', retrofitVersion)
+  ]
+
+  okHttpDependencies = [
+      okHttpLoggin   : buildDependency(okkHttpPackage,'logging-interceptor', okktpLogginInterceptorVersion)
+  ]
+
+  rxDependencies = [
+      rxAndroid       : buildDependency(reactivePackage, 'rxandroid', rxAndroidVersion),
+      rxJava          : buildDependency(reactivePackage,'rxjava',rxJavaVersion)
+  ]
+
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+  return "${pack}:${dependency}:${version}"
+}
