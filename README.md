@@ -1,4 +1,4 @@
-#Star Wars Sample 🚀
+## Star Wars Sample 🚀
 This is a sample with Star Wars API
 feat: 
 *Kotlin
